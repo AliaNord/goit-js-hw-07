@@ -27,25 +27,18 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-// function createMarkup(arr) {
-//   return arr
-//     .map(
-//       (image) => `
-//       <li><img src="${image.url}" alt="${image.alt}"></li>
-//   `
-//     )
-//     .join("");
-// }
+function createMarkup(arr) {
+  return arr
+    .map(
+      (image) => `
+      <li><img src="${image.url}" alt="${image.alt}"></li>
+  `
+    )
+    .join("");
+}
 
-// gallery.insertAdjacentHTML("beforeend", createMarkup(images));
+gallery.insertAdjacentHTML("beforeend", createMarkup(images));
 
-images.forEach((image) => {
-  const liItem = document.createElement("li");
-  const imageItem = document.createElement("img");
-  imageItem.setAttribute("src", image.url);
-  imageItem.setAttribute("alt", image.alt);
-  liItem.append(imageItem);
-  gallery.append(liItem);
-});
+
 
 

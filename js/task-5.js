@@ -10,7 +10,10 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+;
+
 function handleButton(event) {
-  currentColor.textContent = getRandomHexColor();
-  body.style.backgroundColor = getRandomHexColor();
+  const finalColor = getRandomHexColor();
+  currentColor.textContent = finalColor;
+  body.style.backgroundColor = finalColor;
 }

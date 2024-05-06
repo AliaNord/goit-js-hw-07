@@ -13,11 +13,12 @@ function handleSubmit(event) {
     password: password.trim(),
   };
 
-  event.currentTarget.reset();
+
 
   if (password.trim() == "" || email.trim() == "") {
     alert("All form fields must be filled in");
   } else {
     console.log(info);
+    event.currentTarget.reset();
   }
 }
